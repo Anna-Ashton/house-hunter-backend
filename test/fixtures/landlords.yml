@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  landlord_id: 1
+  full_name: MyString
+  username: MyString
+  email: MyString
+  contacts: 1
+  caretaker_name: MyString
+  password: MyString
+
+two:
+  landlord_id: 1
+  full_name: MyString
+  username: MyString
+  email: MyString
+  contacts: 1
+  caretaker_name: MyString
+  password: MyString
