@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  house_id: 1
+  estate_name: MyString
+  img_url: MyString
+  price: 1
+  user_id: 1
+  landlord_id: 1
+  location: MyString
+
+two:
+  house_id: 1
+  estate_name: MyString
+  img_url: MyString
+  price: 1
+  user_id: 1
+  landlord_id: 1
+  location: MyString
