@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_16_181545) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_11_221644) do
   create_table "houses", force: :cascade do |t|
     t.string "estate_name"
     t.string "img_url"
@@ -48,9 +48,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_16_181545) do
     t.string "full_name"
     t.string "username"
     t.string "email"
-    t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "contact"
   end
 
 end
