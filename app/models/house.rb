@@ -1,5 +1,5 @@
 class House < ApplicationRecord
-    belongs_to :landlord
-    has_many :reviews
-    has_many :users
+  has_many :reviews
+  belongs_to :user
+  belongs_to :landlord
 end
