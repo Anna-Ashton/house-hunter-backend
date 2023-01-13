@@ -1,5 +1,5 @@
 class LandlordsController < ApplicationController
-    skip_before_action :authorized, only: [:create]
+    skip_before_action :authorized, only: [:create, :index]
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
 
       def index
@@ -13,7 +13,7 @@ class LandlordsController < ApplicationController
     #   end
 
       def create
-        landlord = Landlord.create(landlord_params)
+        landlord = Landlord.create!(landlord_params)
         render json: landlord, status: :created
       end
     
@@ -37,7 +37,7 @@ class LandlordsController < ApplicationController
       end
 
       def landlord_params
-        params.permit(:full_name, :username, :email, :contacts, :caretaker_name, :password, :password_confirmation)
+        params.permit(:full_name, :username, :email, :caretaker_name,:contacts, :password, :password_confirmation)
       end
 
 
