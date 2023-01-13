@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-puts "Seeding data!"
+puts "Seeding data! 🌱🌱🌱🌱🌱🌱🌱"
 
 # seeding users
 9.times do
@@ -18,6 +18,7 @@ puts "Seeding data!"
   )
 end
 
+puts "landlords seeds 🚀🚀🚀"
 # seeding landlords
 9.times do
   Landlord.create(
@@ -30,6 +31,7 @@ end
   )
 end
 
+puts "homes here we go 🏚️🏚️🏚️🏚️"
 # seeding houses
 House.create(estate_name: "Jamhuri Estate" ,
   img_url: "https://images.unsplash.com/photo-1565953522043-baea26b83b7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
@@ -113,6 +115,8 @@ House.create(estate_name: "Nyayo Estate",
   house_type: "Apartment",
   bedrooms: 3)
 
+
+  puts "review 🌠🌠🌠🌠🌠🌠🌠"
 # seeding reviews
 Review.create(user_id: 1,house_id: 1,comment: "The apartment is spacious and has sufficient water supply.")
 Review.create(user_id: 1,house_id: 1,comment: "Beautiful apartment with a beautiful scenery.")
@@ -133,4 +137,11 @@ Review.create(user_id: 8,house_id: 8,comment: "The compound is very private with
 Review.create(user_id: 9,house_id: 9,comment: "Ample parking space and a big compound for kids to play.")
 Review.create(user_id: 9,house_id: 9,comment: "Did not like the balcony, quite dirty.")
 
-puts "End of seeding data!"
+puts "Do bookings ☄️☄️☄️☄️☄️☄️"
+# booking
+Booking.create(user_id: 2,house_id: 2,booking_date: "2023-4-4")
+Booking.create(user_id: 1,house_id: 1,booking_date: "2023-2-4")
+Booking.create(user_id: 3,house_id: 4,booking_date: "2023-3-4")
+
+
+puts "End of seeding data! 🔥🔥🔥🔥"

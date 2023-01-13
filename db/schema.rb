@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_11_221644) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_13_081422) do
+  create_table "bookings", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "house_id"
+    t.date "booking_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "houses", force: :cascade do |t|
     t.string "estate_name"
     t.string "img_url"

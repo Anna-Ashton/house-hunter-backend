@@ -8,10 +8,12 @@ Rails.application.routes.draw do
 
   # post "/signup", to: "landlords#create"
 
-  resources :landlords
+  resources :landlords, only: [:index, :create, :destroy]
   resources :houses
   resources :reviews
+  resources :users
+  resources :bookings
 
-  post 'login', to: 'auth#create'
+  post '/login', to: 'auth#create'
 end
 
