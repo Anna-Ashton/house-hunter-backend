@@ -8,7 +8,7 @@ class AuthController < ApplicationController
             token = encode_token({landlord_id: @landlord.id})
             render json: { landlord: @landlord, token: token }, status: :accepted
         else
-            render json: { errors: "Invalid email or password" }, status: :unauthorized
+            render json: { errors: "Invalid username or password" }, status: :unauthorized
         end
     end
 end
