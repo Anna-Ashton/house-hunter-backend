@@ -15,5 +15,6 @@ Rails.application.routes.draw do
   resources :bookings
 
   post '/login', to: 'auth#create'
+  get "/me", to: "landlords#index"
 end
 

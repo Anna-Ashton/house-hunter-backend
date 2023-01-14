@@ -1,16 +1,16 @@
 class LandlordsController < ApplicationController
-    skip_before_action :authorized, only: [:create, :index]
+    skip_before_action :authorized, only: [:create, :index, ]
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
+    rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response
 
       def index
         landlord = Landlord.find_by(current_user)
         render json: landlord
       end
 
-    #   def show
-    #     landlord = find_landlord
-    #     render json: landlord
-    #   end
+      # def show
+      #   render json: current_user
+      # end
 
       def create
         landlord = Landlord.create!(landlord_params)
