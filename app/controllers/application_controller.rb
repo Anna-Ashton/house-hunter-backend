@@ -25,7 +25,7 @@ class ApplicationController < ActionController::API
     def current_user
         if decoded_token
             landlord_id = decoded_token[0]['landlord_id']
-            @landlord = Landlord.find_by(id: landlord_id)
+            landlord = Landlord.find_by(id: landlord_id)
         end
     end
 
