@@ -11,4 +11,10 @@ class AuthController < ApplicationController
             render json: { errors: "Invalid username or password" }, status: :unauthorized
         end
     end
+
+
+    # Destroy landlord auth
+    def destroy
+        head :no_content
+    end
 end

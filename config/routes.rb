@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   resources :bookings
 
   post '/login', to: 'auth#create'
+  delete "/logout", to: "auth#destroy"
   get "/me", to: "landlords#index"
 end
 
