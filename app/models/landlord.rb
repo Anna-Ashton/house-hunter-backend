@@ -5,6 +5,6 @@ class Landlord < ApplicationRecord
 
   validates :full_name, :username, :caretaker_name, :email, presence: true
   validates :email, uniqueness: true
-  validates :password, length: { in: 6..20 }
+  validates :password, length: { in: 3..20 }
 
 end
